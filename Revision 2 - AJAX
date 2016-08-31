@@ -1,0 +1,17 @@
+Revision 2 introduces a different method for posting events to Jira, which is done by AJAX POST request.
+This method doesn't require FM Plugins (like for v1) or Custom Functions, but simply uses a single Javascript routine that does 
+the post request, grabs the results and shows them of with alert messages.
+Set up process:
+(1) general set up (for "Settings"). This is used to store the REST API settings according to Jira documentation
+  (1.1) url: the resource to be addressed
+  (1.2) username and password of the user that is creating the issue (should already exist in your Jira instance)
+(2) check connection button: this is used to check the server response in the three field at the bottom (Post Response, PostresponseCode
+    and PostResponseHeaders)
+(3) if ok (ResponseCode = 200) you should see the JSON response in the PostResponse field, where you can grab the projectId and IssueTypeId
+    you can use for the next issue creation phase (sorry text is not beautified, might be in future releases...) 
+(4) once you have detected the ProjectId and IssueTypeId that will be used for issue creation, store them in the proper fields along with 
+    assignee name (must already be present in your Jira instance)
+(5) now you have completed the setup process you can test it in the form "Application_AJAX"
+
+NOTES: 
+
