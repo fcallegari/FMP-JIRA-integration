@@ -1,4 +1,5 @@
-Revision 2 introduces a different method for posting events to Jira, which is done by AJAX POST request.
+# Version 2 - AJAX
+Version 2 introduces a different method for posting events to Jira, which is done by AJAX POST request.
 This method doesn't require FM Plugins (like for v1) or Custom Functions, but simply uses a single Javascript routine that does 
 the post request, grabs the results and shows them of with alert messages.
 Set up process:
